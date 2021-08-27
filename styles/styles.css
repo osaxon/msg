@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {font-family: "Gotham-bold"; src: url("//db.onlinewebfonts.com/t/51296ff9eb1e16185eb6a1000de5d345.eot"); src: url("//db.onlinewebfonts.com/t/51296ff9eb1e16185eb6a1000de5d345.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/51296ff9eb1e16185eb6a1000de5d345.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/51296ff9eb1e16185eb6a1000de5d345.woff") format("woff"), url("//db.onlinewebfonts.com/t/51296ff9eb1e16185eb6a1000de5d345.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/51296ff9eb1e16185eb6a1000de5d345.svg#Gotham") format("svg"); }
+
+@font-face {font-family: "Gotham"; src: url("//db.onlinewebfonts.com/t/bd317adf74e5e7e564eb61ce9926cc6d.eot"); src: url("//db.onlinewebfonts.com/t/bd317adf74e5e7e564eb61ce9926cc6d.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/bd317adf74e5e7e564eb61ce9926cc6d.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/bd317adf74e5e7e564eb61ce9926cc6d.woff") format("woff"), url("//db.onlinewebfonts.com/t/bd317adf74e5e7e564eb61ce9926cc6d.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/bd317adf74e5e7e564eb61ce9926cc6d.svg#Gotham") format("svg"); }
+
+.bold-font {
+  font-family: "Gotham-bold";
+}
+
+.font-face {
+  font-family: "Gotham";
+}
+
 .black {
     background-color: #1a1a1a;
 }
@@ -17,3 +29,16 @@
 .font {
     font-family: gotham;
 }
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color:#1a1a1a;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color:#1a1a1a;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color:#1a1a1a;
+  }
