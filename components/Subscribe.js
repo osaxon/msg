@@ -21,7 +21,7 @@ export default function Subscribe() {
 
   return (
     <div className="flex items-center h-full w-full bg-white">
-      <div className="flex flex-wrap items-center">
+      <div className="">
         <div className="w-full mx-auto">
           <h1 className="tracking-widest underline my-4 text-center font-black text-red-500 text-5xl">
             MSG
