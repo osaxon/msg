@@ -2,4 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+.black {
+    background-color: #1a1a1a;
+}
 
+.text-orange {
+    color: #ff5800;
+}
+
+.bg-orange {
+    background-color: #ff5800;
+}
+
+.font {
+    font-family: gotham;
+}

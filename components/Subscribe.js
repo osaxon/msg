@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
+import Image from "next/image";
+import logo from "../public/logo.png";
 
 export default function Subscribe() {
   const [email, setEmail] = useState("");
@@ -20,36 +22,21 @@ export default function Subscribe() {
   };
 
   return (
-    <div className="flex items-center h-full w-full bg-white">
-      <div className="">
-        <div className="w-full mx-auto">
-          <h1 className="tracking-widest underline my-4 text-center font-black text-red-500 text-5xl">
-            MSG
-          </h1>
-        </div>
-
-        <form
-          className="mb-4 md:flex md:flex-wrap md:justify-between"
-          onSubmit={subscribe}
+    <div className="bg-white md:w-5/12 w-full p-10 min-h-full">
+      <div className="md:mt-12 px-20 md:px-2">
+        <Image src={logo} layout="intrinsic" />
+      </div>
+      <div className="mt-4 md:mt-12 border flex flex-wrap justify-center">
+        <input
+          className="bg-orange text-black p-2 tracking-wide w-full text-center"
+          placeholder="Enter your email"
+        />
+        <button
+          className="mt-2 bg-orange text-black p-2 tracking-widest w-full font-black"
+          onClick={subscribe}
         >
-          <div className="flex flex-col mb-4 md:w1/2">
-            <input
-              className="inline-flex mx-auto text-center w-full"
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="Enter email"
-            />
-          </div>
-
-          <button
-            className="bg-red-600 text-white"
-            type="submit"
-            disabled={state === "Loading"}
-          >
-            {state === "Loading" ? "Loading" : "Subscribe"}
-          </button>
-        </form>
+          SUBSCRIBE
+        </button>
       </div>
     </div>
   );

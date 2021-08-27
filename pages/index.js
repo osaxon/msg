@@ -2,22 +2,27 @@ import Subscribe from "../components/Subscribe";
 
 export default function Home() {
   return (
-    <div className="h-screen grid grid-cols-1 md:grid-cols-3 bg-gray-900 grid-rows-2">
-      <section className="md:col-span-2 p-12 md:p-28 md:row-span-full">
-        <h1 className="text-red-500 font-black md:text-5xl text-4xl w-full mb-6">
-          KEYS TO <br/> THE CITY .
-        </h1>
-        <p className="center text-white">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel
-          ultrices felis, lacinia vehicula est. In condimentum leo vitae neque
-          ullamcorper vestibulum. Quisque viverra elementum diam sed aliquam.
-          Aliquam vel ante ac tellus pharetra volutpat. Morbi lobortis metus sed
-        </p>
+    <main className="black flex flex-wrap">
+      <section className="md:w-7/12 px-12 p-8 md:px-24 md:p-12 md:min-h-screen">
+        <h1 className="text-orange text-5xl font-black">KEYS TO<br/> THE CITY.</h1>
+        <p className="mt-4 text-gray-50">Unlock ACTUAL knowledge of uni life from students that remember what it's like to be a frsher.</p>
+        <br/>
+        <p className="text-gray-50">Maximise your experience by learning from our mistakes, and start the year with tips we wish we had when we first arrived</p>
+        <br/>
+        <p className="text-gray-50">With inside info on the best clubs in the city (you won't find them on a bullshit wristband), how to make friends quickly, and why not to sleep with your flatmates, sign up below to make this the greatest year of your life.</p>
+        <br/>
+        <p className="text-gray-50">Follow our guide, and it won't be hard.</p>
       </section>
-      <section className="md:col-start-3 row-span-2">
-        <Subscribe />
-      </section>
+
+      <Subscribe/>
+      <style jsx global>{`
+          body {
+            background-color: #1a1a1a;
+            margin: 0;
+            padding: 0;
+          }
+      `}</style>
       
-    </div>
+    </main>
   );
 }
