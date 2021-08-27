@@ -2,10 +2,10 @@ import Subscribe from "../components/Subscribe";
 
 export default function Home() {
   return (
-    <div className="h-screen bg-gray-900 flex flex-wrap md:flex-nowrap">
-      <section className="p-20">
-        <h1 className="inline-flex text-white text-center text-5xl w-full mb-10">
-          KEYS TO THE CITY .
+    <div className="h-screen grid grid-cols-1 md:grid-cols-3 bg-gray-900 grid-rows-2">
+      <section className="md:col-span-2 p-12 md:p-28 md:row-span-full">
+        <h1 className="text-red-500 font-black text-5xl w-full mb-10">
+          KEYS TO <br/> THE CITY .
         </h1>
         <p className="center text-white">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel
@@ -14,7 +14,7 @@ export default function Home() {
           Aliquam vel ante ac tellus pharetra volutpat. Morbi lobortis metus sed
         </p>
       </section>
-      <section className="w-full">
+      <section className="md:col-start-3 row-span-2">
         <Subscribe />
       </section>
       

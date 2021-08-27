@@ -20,24 +20,30 @@ export default function Subscribe() {
   };
 
   return (
-    <div className="bg-white h-screen">
-      <div className="border">
-        <div className="w-full">
-          <h1 className="underline my-4 text-center font-black text-red-500 text-5xl">
+    <div className="flex items-center h-full w-full bg-white">
+      <div className="flex flex-wrap items-center">
+        <div className="w-full mx-auto">
+          <h1 className="tracking-widest underline my-4 text-center font-black text-red-500 text-5xl">
             MSG
           </h1>
         </div>
 
-        <form className="" onSubmit={subscribe}>
-          <input
-            className="text-center w-full"
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Enter email"
-          />
+        <form
+          className="mb-4 md:flex md:flex-wrap md:justify-between"
+          onSubmit={subscribe}
+        >
+          <div className="flex flex-col mb-4 md:w1/2">
+            <input
+              className="inline-flex mx-auto text-center w-full"
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Enter email"
+            />
+          </div>
+
           <button
-            className="w-full bg-red-600 text-white"
+            className="bg-red-600 text-white"
             type="submit"
             disabled={state === "Loading"}
           >
