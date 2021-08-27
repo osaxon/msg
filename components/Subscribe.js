@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import axios from 'axios';
+import React, { useState } from "react";
+import axios from "axios";
 
 export default function Subscribe() {
   const [email, setEmail] = useState("");
@@ -12,24 +12,39 @@ export default function Subscribe() {
 
     try {
       const response = await axios.post("/api/newsletter", { email });
-      setState("Success")
+      setState("Success");
     } catch (e) {
       setErrorMessage(e.response.data.error);
       setState("Error");
     }
-  }
+  };
 
   return (
-    <div className="container mx-auto max-w-screen">
-      <h2>Subscribe to newsletter</h2>
-      
-      <form onSubmit={subscribe}>
-        <label>Email</label>
-        <input value={email} onChange={(e) => setEmail(e.target.value)}/>
-        <button type="submit" disabled={state === "Loading"}>{state === "Loading" ? "Loading" : "Subscribe"}</button>
-      </form>
-      
+    <div className="bg-white h-screen">
+      <div className="border">
+        <div className="w-full">
+          <h1 className="underline my-4 text-center font-black text-red-500 text-5xl">
+            MSG
+          </h1>
+        </div>
 
+        <form className="" onSubmit={subscribe}>
+          <input
+            className="text-center w-full"
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Enter email"
+          />
+          <button
+            className="w-full bg-red-600 text-white"
+            type="submit"
+            disabled={state === "Loading"}
+          >
+            {state === "Loading" ? "Loading" : "Subscribe"}
+          </button>
+        </form>
+      </div>
     </div>
-  )
+  );
 }
