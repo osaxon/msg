@@ -28,7 +28,7 @@ export default function Subscribe() {
       </div>
       <div className="mt-4 md:mt-12 flex flex-wrap justify-center">
         <input
-          className="mx-2 border-orange text-black bg-transparent p-2 tracking-wide w-full text-center placeholder-gray-300"
+          className="mx-2 border-orange text-white bg-transparent p-2 tracking-wide w-full text-center placeholder-gray-300"
           placeholder="Enter your email"
           type="text"
           value={email}
