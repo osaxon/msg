@@ -1,13 +1,12 @@
 import Subscribe from "../components/Subscribe";
-import Heading from "../components/Heading"
+import Heading from "../components/Heading";
+import Image from "next/image";
+import logo from "../public/logo.png";
 
 export default function Home() {
   return (
-
-
-    
-    <main className="black flex flex-wrap">
-      <section className="md:w-7/12 px-12 p-8 md:px-24 mt-20 md:p-12 md:min-h-screen">
+    <main className="flex flex-wrap justify-center">
+      <section className="black md:w-7/12 px-12 p-8 md:px-24 md:p-12 md:min-h-screen">
         <Heading/>
         <p className="mt-4 text-gray-50">Unlock <span className="font-bold">ACTUAL</span> knowledge of uni life from students that remember what it's like to be a fresher.</p>
         
@@ -19,10 +18,18 @@ export default function Home() {
         <p className="text-gray-50">Follow our guide, and it won't be hard...</p>
       </section>
 
-      <Subscribe/>
+      <section className="w-full black px-10 md:w-5/12 flex flex-wrap justify-center md:items-end">
+        <Subscribe/>
+        <div className="mx-5 min-h-10">
+          <Image 
+            src={logo} 
+            layout="intrinsic"
+            />
+        </div>
+      </section>
+      
       <style jsx global>{`
-          body {
-            background-color: #1a1a1a;
+          * {
             margin: 0;
             padding: 0;
           }

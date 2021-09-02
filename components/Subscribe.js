@@ -1,46 +1,53 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useForm } from "react-hook-form";
 import axios from "axios";
-import Image from "next/image";
-import logo from "../public/logo.png";
+
 
 export default function Subscribe() {
+  const { register, handleSubmit, errors, reset } = useForm();
   const [email, setEmail] = useState("");
   const [state, setState] = useState("IDLE");
   const [errorMessage, setErrorMessage] = useState(null);
+  const [message, setMessage] = useState("");
+  const [showMessage, setShowMessage] = useState(true);
 
-  const subscribe = async () => {
+
+  const subscribe = async (e) => {
+    e.preventDefault()
     setState("Loading");
     setErrorMessage(null);
+    
 
     try {
       const response = await axios.post("/api/newsletter", { email });
       setState("Success");
+      setMessage("Thank you for subscribing");
+      setEmail("");
     } catch (e) {
       setErrorMessage(e.response.data.error);
       setState("Error");
+      setMessage("Ooops, please check the email and try again");
+      reset();
     }
   };
 
   return (
-    <div className="black md:w-5/12 w-full p-20 min-h-full">
-      <div className="md:mt-32 md:px-2">
-        <Image src={logo} layout="intrinsic" />
-      </div>
-      <div className="mt-4 md:mt-12 flex flex-wrap justify-center">
-        <input
-          className="mx-2 border-orange text-white bg-transparent p-2 tracking-wide w-full text-center placeholder-gray-300"
-          placeholder="Enter your email"
-          type="text"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <button
-          className="mx-2 mt-2 bg-orange text-black p-2 tracking-widest w-full font-black hover:opacity-75 hover:text-white"
-          onClick={subscribe}
-        >
-          SUBSCRIBE
-        </button>
-      </div>
+    <div className="mb-5">
+      <input
+        className="border-orange w-full text-white h-10 bg-transparent p-2 tracking-wide text-center placeholder-gray-300"
+        placeholder="Enter your email"
+        type="text"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+      />
+      <button
+        className="mt-2 bg-orange text-black h-10 p-2 tracking-widest w-full font-black hover:opacity-75 hover:text-white"
+        onClick={subscribe}
+      >
+        SUBSCRIBE
+      </button>
+      <h3 className="text-center text-xl text-gray-100 mt-4">
+      </h3>
     </div>
   );
 }
