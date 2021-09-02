@@ -22,13 +22,13 @@ export default function Subscribe() {
   };
 
   return (
-    <div className="bg-white md:w-5/12 w-full p-20 min-h-full">
+    <div className="black md:w-5/12 w-full p-20 min-h-full">
       <div className="md:mt-32 md:px-2">
         <Image src={logo} layout="intrinsic" />
       </div>
       <div className="mt-4 md:mt-12 flex flex-wrap justify-center">
         <input
-          className="mx-2 bg-orange text-black p-2 tracking-wide w-full text-center placeholder-black"
+          className="mx-2 border-orange text-black bg-transparent p-2 tracking-wide w-full text-center placeholder-gray-300"
           placeholder="Enter your email"
         />
         <button

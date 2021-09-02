@@ -3,6 +3,9 @@ import Heading from "../components/Heading"
 
 export default function Home() {
   return (
+
+
+    
     <main className="black flex flex-wrap">
       <section className="md:w-7/12 px-12 p-8 md:px-24 mt-20 md:p-12 md:min-h-screen">
         <Heading/>
@@ -26,5 +29,6 @@ export default function Home() {
       `}</style>
       
     </main>
+
   );
 }
