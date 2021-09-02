@@ -30,6 +30,9 @@ export default function Subscribe() {
         <input
           className="mx-2 border-orange text-black bg-transparent p-2 tracking-wide w-full text-center placeholder-gray-300"
           placeholder="Enter your email"
+          type="text"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
         />
         <button
           className="mx-2 mt-2 bg-orange text-black p-2 tracking-widest w-full font-black hover:opacity-75 hover:text-white"
