@@ -9,18 +9,16 @@ export default function Home() {
       <section className="black md:w-7/12 px-6 p-6 md:px-24 md:p-12 md:min-h-screen">
         <Heading/>
         <p className="mt-4 text-gray-50">Unlock <span className="font-bold">ACTUAL</span> knowledge of uni life from students that remember what it's like to be a fresher.</p>
-        
+        <p className="text-gray-50">Learn from our mistakes, and start the year with knowledge we wish we had when we first arrived.</p>
         <br/>
-        <p className="text-gray-50">Maximise your experience by learning from our mistakes, and start the year with tips we wish we had when we first arrived.</p>
+        <p className="text-gray-50">Inside info on the best clubs in the city (you won't find them on a bullshit wristband), how to make friends quickly, and why not to sleep with your flatmates - follow our guide to maximise your uni experience.</p>
         <br/>
-        <p className="text-gray-50">With inside info on the best clubs in the city (you won't find them on a bullshit wristband), how to make friends quickly, and why not to sleep with your flatmates, sign up below to make this the greatest year of your life.</p>
-        <br/>
-        <p className="text-gray-50">Follow our guide, and it won't be hard...</p>
+        <p className="text-gray-50">This might just be the greatest year of your life. Sign up below to guarantee it...</p>
       </section>
 
-      <section className="w-full md:min-h-screen h-72 black md:w-5/12 flex-col justify-center items-center">
+      <section className="w-full md:min-h-screen h-80 black md:w-5/12 flex-col justify-center items-center">
         <Subscribe/>
-        <div className="mx-auto image-container mb-2">
+        <div className="mx-auto image-container">
           <Image 
             src={logo} 
             layout="responsive"
@@ -35,6 +33,7 @@ export default function Home() {
           * {
             margin: 0;
             padding: 0;
+            background-color: #1a1a1a;
           }
       `}</style>
       
