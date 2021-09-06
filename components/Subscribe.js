@@ -32,16 +32,16 @@ export default function Subscribe() {
   };
 
   return (
-    <div className="mb-5">
+    <div className="md:h-1/2 mb-5 flex flex-col md:justify-center items-center">
       <input
-        className="border-orange w-full text-white h-10 bg-transparent p-2 tracking-wide text-center placeholder-gray-300"
+        className="border-orange w-2/3 text-white h-10 bg-transparent p-2 tracking-wide text-center placeholder-gray-300"
         placeholder="Enter your email"
         type="text"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
       <button
-        className="mt-2 bg-orange text-black h-10 p-2 tracking-widest w-full font-black hover:opacity-75 hover:text-white"
+        className="mt-2 bg-orange w-2/3 text-black h-10 p-2 tracking-widest w-full font-black hover:opacity-75 hover:text-white"
         onClick={subscribe}
       >
         SUBSCRIBE
