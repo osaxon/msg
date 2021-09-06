@@ -6,7 +6,7 @@ import logo from "../public/logo.png";
 export default function Home() {
   return (
     <main className="flex flex-wrap justify-center">
-      <section className="black md:w-7/12 px-8 p-8 md:px-24 md:p-12 md:min-h-screen">
+      <section className="black md:w-7/12 px-8 p-6 md:px-24 md:p-12 md:min-h-screen">
         <Heading/>
         <p className="mt-4 text-gray-50">Unlock <span className="font-bold">ACTUAL</span> knowledge of uni life from students that remember what it's like to be a fresher.</p>
         
