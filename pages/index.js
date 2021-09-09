@@ -13,7 +13,9 @@ export default function Home() {
         <br/>
         <p className="text-gray-50">Inside info on the best clubs in the city (you won't find them on a bullshit wristband), how to make friends quickly, and why not to sleep with your flatmates - follow our guide to maximise your uni experience.</p>
         <br/>
-        <p className="text-gray-50">This might just be the greatest year of your life. Sign up below to guarantee it...</p>
+        <p className="text-gray-50">This might just be the greatest year of your life.</p>
+        <br />
+        <p className="text-gray-50">Sign up below to guarantee it...</p>
       </section>
 
       <section className="w-full md:min-h-screen h-80 black md:w-5/12 flex-col justify-center items-center">
