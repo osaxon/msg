@@ -20,7 +20,7 @@ export default function Home() {
 
       <section className="w-full md:min-h-screen h-80 black md:w-5/12 flex-col justify-center items-center">
         <Subscribe/>
-        <div className="mx-auto image-container">
+        <div className="mx-auto w-1/3 md:w-1/2">
           <Image 
             src={logo} 
             layout="responsive"
