@@ -22,7 +22,7 @@ export default function Heading() {
           crossOrigin=""
         />
       </Head>
-      <h1 className="text-orange text-5xl font-black font-face">
+      <h1 className="text-orange text-6xl md:text-7xl font-black font-face">
         KEYS TO
         <br />
         THE CITY{state ? "." : ""}
